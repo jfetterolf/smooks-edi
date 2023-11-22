@@ -18,6 +18,7 @@ About this example
         5. http://milyn.codehaus.org/EdiSax
 
 How to Run?
+sdk install java 8.0.372-amzn
 ===========
     Requirements:
         1. JDK 1.8

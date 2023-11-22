@@ -24,6 +24,7 @@ About this example
         6. The Javabean classes in src/main/java/example/beans.
 
 How to Run?
+sdk install java 8.0.372-amzn
 ===========
     Requirements:
         1. JDK 1.8

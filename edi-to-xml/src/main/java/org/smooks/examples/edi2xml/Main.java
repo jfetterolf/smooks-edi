@@ -50,9 +50,13 @@ import org.smooks.support.StreamUtils;
 import org.smooks.io.payload.StringResult;
 import org.xml.sax.SAXException;
 
+
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
-import java.util.Locale;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+// import java.util.Locale;
 
 /**
  * Simple example main class.
@@ -77,6 +81,12 @@ public class Main {
             // Filter the input message to the outputWriter, using the execution context...
             smooks.filterSource(executionContext, new StreamSource(new ByteArrayInputStream(messageIn)), result);
 
+
+            // Saving xml to file
+            String xmlFilePath = "output-message.xml";
+            deleteFile(xmlFilePath);
+            writeXml(xmlFilePath, result.getResult().toString());
+
             return result.getResult();
         } finally {
             smooks.close();
@@ -95,6 +105,7 @@ public class Main {
         System.out.println("==============Message Out=============");
         System.out.println(messageOut);
         System.out.println("======================================\n\n");
+        System.out.println("type:" + messageOut.getClass().getName());
 
         pause("And that's it!  Press 'enter' to finish...");
     }
@@ -117,4 +128,23 @@ public class Main {
         }
         System.out.println("\n");
     }
+
+    public static void deleteFile(String filePath) {
+        File fileToDelete = new File(filePath);
+
+        if (fileToDelete.exists()) {
+            fileToDelete.delete();
+        }
+    }
+
+    public static void writeXml(String filePath, String xmlString) {
+        try {
+            Path path = Paths.get(filePath);
+            Files.write(path, xmlString.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 }

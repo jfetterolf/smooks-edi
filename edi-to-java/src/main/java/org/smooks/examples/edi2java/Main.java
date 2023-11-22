@@ -50,6 +50,7 @@ import org.smooks.support.StreamUtils;
 import org.smooks.io.payload.JavaResult;
 import org.xml.sax.SAXException;
 
+import javax.xml.bind.JAXB;
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 
@@ -78,7 +79,20 @@ public class Main {
 
             // Filter the input message to the outputWriter, using the execution context...
             smooks.filterSource(executionContext, new StreamSource(new ByteArrayInputStream(messageIn)), javaResult);
+
+            System.out.println("Java object?");
+            System.out.println(javaResult.getClass().getName());
+            System.out.println("doing?" + javaResult.getClass().getSimpleName());
+            System.out.println("*******************************");
+            System.out.println("What do I look like?");
             System.out.println(javaResult.toString());
+
+
+            System.out.println("THESE THINGS IVE DONE --------------------------------------------------------------------------------->");
+            System.out.println(javaResult.getResultMap().toString());
+
+
+
             return javaResult;
         } finally {
             smooks.close();
@@ -126,5 +140,17 @@ public class Main {
     public JavaResult runSmooksTransform() throws IOException, SAXException {
         ExecutionContext executionContext = smooks.createExecutionContext();
         return runSmooksTransform(executionContext);
+    }
+
+    public static void deleteFile(String filePath) {
+        File fileToDelete = new File(filePath);
+
+        if (fileToDelete.exists()) {
+            fileToDelete.delete();
+        }
+    }
+
+    public static <T> void writeXml(T obj, File f) {
+        JAXB.marshal(obj, f);
     }
 }
