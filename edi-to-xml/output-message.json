@@ -1,0 +1,32 @@
+{
+  "set-header" : {
+    "type" : "834",
+    "control-number" : "0021"
+  },
+  "beg-segment" : {
+    "set-purpose-code" : "00",
+    "reference-id" : "1234",
+    "date" : "YYYYMMDD",
+    "time" : "HHMM",
+    "time-code" : "PT"
+  },
+  "order-item" : {
+    "reference-identification-qualifier" : "38",
+    "reference-id" : "00112233"
+  },
+  "company-name" : {
+    "identifier" : "P5",
+    "company-name" : "COMPANY NAME",
+    "state" : "FI",
+    "company-id" : "123456789"
+  },
+  "benefit-info" : {
+    "response-code" : "Y",
+    "maintenance-code" : "18",
+    "ins-line-code" : "030",
+    "plan-coverage-description" : "XN",
+    "coverage-level-code" : "WY",
+    "policy-number" : "123456",
+    "plan-network-id" : "ORG123"
+  }
+}

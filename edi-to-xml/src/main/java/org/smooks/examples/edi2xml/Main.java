@@ -51,12 +51,18 @@ import org.smooks.io.payload.StringResult;
 import org.xml.sax.SAXException;
 
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+
+import javax.imageio.IIOException;
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 // import java.util.Locale;
+
 
 /**
  * Simple example main class.
@@ -87,6 +93,16 @@ public class Main {
             deleteFile(xmlFilePath);
             writeXml(xmlFilePath, result.getResult().toString());
 
+            
+            System.out.println("\n\n==============JSON Result==============");
+            String jsonString = convertXmlToJson(result.getResult().toString());
+            System.out.println(jsonString);
+            System.out.println("======================================\n\n");
+
+            String jsonFilePath = "output-message.json";
+            deleteFile(jsonFilePath);
+            writeJson(jsonFilePath, jsonString);
+
             return result.getResult();
         } finally {
             smooks.close();
@@ -98,7 +114,7 @@ public class Main {
         System.out.println(new String(messageIn));
         System.out.println("======================================\n");
 
-        pause("The EDI input stream can be seen above.  Press 'enter' to see this stream transformed into XML...");
+        pause("The EDI input stream & resulting JSON can be seen above.  Press 'enter' to see this stream transformed into XML...");
 
         String messageOut = Main.runSmooksTransform();
 
@@ -145,6 +161,22 @@ public class Main {
             e.printStackTrace();
         }
 
+    }
+
+    public static String convertXmlToJson(String xml) throws IOException {
+        XmlMapper xmlMapper = new XmlMapper();
+        JsonNode node = xmlMapper.readTree(xml.getBytes());
+        ObjectMapper jsonMapper = new ObjectMapper();
+        return jsonMapper.writerWithDefaultPrettyPrinter().writeValueAsString(node);
+    }
+
+    public static void writeJson(String filePath, String jsonString) {
+        try {
+            Path path = Paths.get(filePath);
+            Files.write(path, jsonString.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
