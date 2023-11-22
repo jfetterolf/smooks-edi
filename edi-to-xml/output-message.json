@@ -1,7 +1,17 @@
 {
-  "set-header" : {
+  "functional-group-header" : {
+    "functional-identifier-code" : "BE",
+    "application-sender-code" : "SENDERID",
+    "application-receiver-code" : "RECEIVERID",
+    "date" : "YYMMDD",
+    "time" : "HHMM",
+    "group-control-number" : "1234",
+    "responsible-agency-code" : "X",
+    "release-version-code" : "004010X095A1"
+  },
+  "transaction-set-header" : {
     "type" : "834",
-    "control-number" : "0021"
+    "control-number" : "0001"
   },
   "beg-segment" : {
     "set-purpose-code" : "00",
@@ -28,5 +38,55 @@
     "coverage-level-code" : "WY",
     "policy-number" : "123456",
     "plan-network-id" : "ORG123"
+  },
+  "health-coverage" : {
+    "level-code" : "VS",
+    "health-coverage-code" : "FAM"
+  },
+  "date-time-period" : {
+    "coverage-period" : "356",
+    "date-format-code" : "D8",
+    "date-range" : "YYYYMMDD-YYYYMMDD"
+  },
+  "quantity" : {
+    "family-size" : "DT",
+    "quantity" : "1"
+  },
+  "name-segment" : {
+    "entity-identifier-code" : "IL",
+    "last-name" : "LAST",
+    "first-name" : "FIRST",
+    "middle-initial" : "MI",
+    "identification-code" : "123456789"
+  },
+  "address-info" : {
+    "address" : "123 MAIN ST"
+  },
+  "geographic-location" : {
+    "city-name" : "CITY",
+    "state-code" : "ST",
+    "postal-code" : "12345"
+  },
+  "demographic-info" : {
+    "date-format-code" : "D8",
+    "date-of-birth" : "YYYYMMDD",
+    "gender-code" : "F",
+    "marital-status-code" : "M"
+  },
+  "life-event-info" : {
+    "event-code" : "SU",
+    "group-spec-code" : "IND"
+  },
+  "transaction-set-trailer" : {
+    "segments" : "14",
+    "transaction-set-control-number" : "0001"
+  },
+  "functional-group-trailer" : {
+    "tranaction-sets" : "1",
+    "function-group-control-number" : "1234"
+  },
+  "interchange-control-trailer" : {
+    "functional-groups" : "1",
+    "interchange-control-number" : "000000001"
   }
 }

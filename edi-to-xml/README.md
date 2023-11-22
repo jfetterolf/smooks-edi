@@ -28,3 +28,8 @@ sdk install java 8.0.372-amzn
         1. "mvn clean install"
         2. "mvn exec:java"
 
+Troubleshooting
+===========
+    Exception in thread "main" org.smooks.api.SmooksException: Failed to filter source
+    ...
+    Possible Cause: Too many trailing segment terminators in input-message.edi

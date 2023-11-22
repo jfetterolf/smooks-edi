@@ -55,7 +55,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
-import javax.imageio.IIOException;
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 import java.nio.file.Files;
@@ -94,7 +93,7 @@ public class Main {
             writeXml(xmlFilePath, result.getResult().toString());
 
             
-            System.out.println("\n\n==============JSON Result==============");
+            System.out.println("\n\n===========JSON Result============");
             String jsonString = convertXmlToJson(result.getResult().toString());
             System.out.println(jsonString);
             System.out.println("======================================\n\n");
@@ -118,7 +117,7 @@ public class Main {
 
         String messageOut = Main.runSmooksTransform();
 
-        System.out.println("==============Message Out=============");
+        System.out.println("================XML Result============");
         System.out.println(messageOut);
         System.out.println("======================================\n\n");
         System.out.println("type:" + messageOut.getClass().getName());
