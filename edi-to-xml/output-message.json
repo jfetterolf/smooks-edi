@@ -1,139 +1,194 @@
 {
   "transaction-set-header" : {
-    "transaction-set-identifier" : "271",
-    "transaction-set-control-number" : "4321",
-    "identifier-code" : "005010X279A1"
+    "transaction-set-identifier" : "837",
+    "transaction-set-control-number" : "3701",
+    "identifier-code" : "005010X222"
   },
   "beginning-hierarchichal-transaction" : {
-    "hierarchichal-structure-code" : "0022",
-    "transaction-set-purpose-code" : "11",
-    "reference-identification" : "10001234",
-    "date" : "20060501",
-    "time" : "1319"
+    "hierarchichal-structure-code" : "0019",
+    "transaction-set-purpose-code" : "00",
+    "reference-identification" : "007227",
+    "date" : "20050215",
+    "time" : "075420",
+    "transaction-set-type-code" : "CH"
   },
-  "header-level" : {
-    "hierarchical-id-number" : "1",
-    "hierarchical-parent-id-number" : "",
-    "hierarchical-level-code" : "20",
-    "hierarchical-child-code" : "1"
-  },
-  "provider-info" : {
-    "person-entity-identifier-code" : "PR",
+  "name" : {
+    "person-entity-identifier-code" : "41",
     "entity-type-qualifier" : "2",
-    "name" : "ABC COMPANY",
-    "name-info-1" : "",
-    "name-info-2" : "",
-    "name-info-3" : "",
-    "name-info-4" : "",
-    "provider-entity-identifier-code" : "PI",
-    "identification-code" : "842610001"
-  },
-  "header-level-2" : {
-    "hierarchical-id-number" : "2",
-    "hierarchical-parent-id-number" : "1",
-    "hierarchical-level-code" : "21",
-    "hierarchical-child-code" : "1"
-  },
-  "organization-info" : {
-    "person-entity-identifier-code" : "1P",
-    "entity-type-qualifier" : "2",
-    "name" : "BONE AND JOINT CLINIC",
-    "name-info-1" : "",
-    "name-info-2" : "",
-    "name-info-3" : "",
-    "name-info-4" : "",
-    "provider-entity-identifier-code" : "SV",
-    "identification-code" : "2000035"
-  },
-  "header-level-3" : {
-    "hierarchical-id-number" : "3",
-    "hierarchical-parent-id-number" : "2",
-    "hierarchical-level-code" : "22",
-    "hierarchical-child-code" : "0"
-  },
-  "trace" : {
-    "trace-type-code" : "2",
-    "trace-identifier" : "93175-012547",
-    "originating-company-identifier" : "9877281234"
-  },
-  "patient-info" : {
-    "person-entity-identifier-code" : "IL",
-    "entity-type-qualifier" : "1",
-    "last-name" : "SMITH",
-    "first-name" : "JOHN",
-    "middle-initial" : "",
-    "blank-3" : "",
-    "blank-4" : "",
-    "provider-entity-identifier-code" : "MI",
-    "identification-code" : "123456789"
-  },
-  "patient-address" : {
-    "street-address" : "15197 BROADWAY AVENUE",
-    "street-address-2" : "APT 215"
-  },
-  "geographic-location" : {
-    "city-name" : "KANSAS CITY",
-    "state-name" : "MO",
-    "zip-code" : "64108"
-  },
-  "demographic-information" : {
-    "date" : "D8",
-    "date-of-birth" : "19630519",
-    "gender-information" : "M"
-  },
-  "date-time-period" : {
-    "date-code" : "346",
-    "date-qualifier-code" : "D8",
-    "date" : "20060101"
-  },
-  "eligibility-benefit" : {
-    "eb-segment-identifier" : "1",
-    "coverage-level-code" : "",
-    "service-type-code" : "30",
-    "insurance-type-code" : "",
-    "plan-coverage-description" : "GOLD 123 PLAN"
-  },
-  "eligibility-benefit-2" : {
-    "stoploss" : "L"
-  },
-  "eligibility-benefit-3" : {
-    "eb-segment-identifier" : "1",
-    "coverage-level-code" : "",
-    "service-type-code" : "1>33>35>47>86>88>98>AL>MH>UC"
-  },
-  "eligibility-benefit-4" : {
-    "eb-segment-identifier" : "B",
-    "coverage-level-code" : "",
-    "service-type-code" : "1>33>35>47>86>88>98>AL>MH>UC",
-    "hmo-indicator" : "HM",
-    "plan-coverage-description" : "GOLD 123 PLAN",
-    "time-period-qualifier" : "27",
-    "quantity" : "30",
+    "full-name" : "DAVID GREEN",
     "blank-1" : "",
     "blank-2" : "",
     "blank-3" : "",
     "blank-4" : "",
-    "indicator" : "N"
+    "provider-entity-identifier-code" : "46",
+    "identification-code" : "S01057"
   },
-  "loop-header" : {
-    "loop-identifier-code" : "2120"
+  "contact-information" : {
+    "contact-function-code" : "IC",
+    "contact-name" : "KATHY SMITH",
+    "communication-number-qualifier" : "TE",
+    "telephone-number" : "4105558888"
+  },
+  "insurance-provider-information" : {
+    "entitiyy-identifier-code" : "40",
+    "entitity-type-qualifier" : "2",
+    "full-name" : "MEDICARE PART B MARYLAND",
+    "blank-1" : "",
+    "blank-2" : "",
+    "blank-3" : "",
+    "blank-4" : "",
+    "identification-code-qualifier" : "46",
+    "tax-code" : "12345"
+  },
+  "header-level" : {
+    "hierarchical-id-number" : "1",
+    "blank-1" : "",
+    "hierarchical-level-code" : "20",
+    "hierarchical-child-code" : "1"
+  },
+  "patient-info" : {
+    "person-entity-identifier-code" : "85",
+    "entity-type-qualifier" : "1",
+    "name" : "GREENE",
+    "last-name" : "DAVID",
+    "middle-initial" : "M",
+    "blank-3" : "",
+    "blank-4" : "",
+    "provider-entity-identifier-code" : "XX",
+    "identification-code" : "1234567890"
+  },
+  "patient-address" : {
+    "street-address" : "1264 OAKWOOD AVE"
+  },
+  "geographic-location" : {
+    "city-name" : "BALTIMORE",
+    "state-name" : "MD",
+    "zip-code" : "21236"
+  },
+  "reference-information" : {
+    "reference-identifier-qualifier" : "EI",
+    "reference-identifier" : "987654321"
+  },
+  "contact-information-ic" : {
+    "contact-function-code" : "IC",
+    "contact" : "DR",
+    "communication-number-qualifier" : "TE",
+    "telephone-number" : "4105551212"
+  },
+  "header-level-2" : {
+    "hierarchical-id-number" : "2",
+    "blank-1" : "1",
+    "hierarchical-level-code" : "22",
+    "hierarchical-child-code" : "0"
+  },
+  "subscriber-information" : {
+    "payer-responsibility-sequence-number-code" : "P",
+    "individual-relationship-code" : "18",
+    "insurance-type-code" : "",
+    "group-code" : "",
+    "person-code" : "",
+    "claim-filing-indicator-code" : "",
+    "blank-1" : "",
+    "blank-2" : "MB"
+  },
+  "name-entitiy-insured" : {
+    "person-entity-identifier-code" : "IL",
+    "entity-type-qualifier" : "1",
+    "first-name" : "WILLIAMSON",
+    "last-name" : "MATTHEW",
+    "middle-initial" : "J",
+    "blank-3" : "",
+    "blank-4" : "",
+    "provider-entity-identifier-code" : "MI",
+    "identification-code" : "123456789A"
+  },
+  "insured-address" : {
+    "street-address" : "128 BROADCREEK"
+  },
+  "insured-geographic-location" : {
+    "city-name" : "BALTIMORE",
+    "state-name" : "MD",
+    "zip-code" : "21234"
+  },
+  "demographic-information" : {
+    "date" : "D8",
+    "date-of-birth" : "19250110",
+    "gender-information" : "M"
   },
   "name-entitiy-payer" : {
-    "person-entity-identifier-code" : "P3",
-    "entity-type-qualifier" : "1",
-    "last-name" : "JONES",
-    "first-name" : "MARCUS",
+    "person-entity-identifier-code" : "PR",
+    "entity-type-qualifier" : "2",
+    "first-name" : "MEDICARE PART B MARYLAND",
+    "last-name" : "",
     "middle-initial" : "",
     "blank-3" : "",
     "blank-4" : "",
-    "provider-entity-identifier-code" : "SV",
-    "identification-code" : "0202034"
+    "provider-entity-identifier-code" : "PI",
+    "identification-code" : "C12345"
   },
-  "loop-trailer" : {
-    "loop-identifier-code" : "2120"
+  "claim-information" : {
+    "claim-id" : "125WILL",
+    "claim-amount" : "145.5",
+    "claim-info-1" : "",
+    "claim-info-2" : "",
+    "claim-info-3" : "11:B:1",
+    "claim-info-4" : "Y",
+    "claim-info-5" : "A",
+    "claim-info-6" : "Y",
+    "claim-info-7" : "Y"
+  },
+  "date-of-admission" : {
+    "date-code" : "454",
+    "date-qualifier-code" : "D8",
+    "date" : "20050115"
+  },
+  "date-of-onset" : {
+    "date-code" : "453",
+    "date-qualifier-code" : "D8",
+    "date" : "20050110"
+  },
+  "date-of-last-visit" : {
+    "date-code" : "455",
+    "date-qualifier-code" : "D8",
+    "date" : "20050113"
+  },
+  "spinal-manipulation-services-information" : {
+    "cr2-blank-1" : "",
+    "cr2-blank-2" : "",
+    "cr2-blank-3" : "",
+    "cr2-blank-4" : "",
+    "cr2-blank-5" : "",
+    "cr2-blank-6" : "",
+    "cr2-blank-7" : "",
+    "cr2-blank-8" : "A",
+    "cr2-blank-9" : "",
+    "diagnosis" : "CHRONIC PAIN AND DISCOMFORT"
+  },
+  "health-care-diagnosis-code" : {
+    "health-care-code-information" : "BK:7215"
+  },
+  "transaction-set-line-number" : {
+    "line-number" : "1"
+  },
+  "professional-service" : {
+    "service-code" : "HC:98940",
+    "charge-amount" : "145.5",
+    "unit-code" : "UN",
+    "quantity" : "1",
+    "sv1-blank-1" : "",
+    "service-unit-count" : "1"
+  },
+  "service-date" : {
+    "date-code" : "472",
+    "date-qualifier-code" : "D8",
+    "date" : "20050215"
+  },
+  "reference-information-trailer" : {
+    "qualifier" : "6R",
+    "reference-id" : "01"
   },
   "transaction-set-trailer" : {
-    "segments" : "22",
-    "transaction-set-control-number" : "4321"
+    "segments" : "29",
+    "transaction-set-control-number" : "3701"
   }
 }

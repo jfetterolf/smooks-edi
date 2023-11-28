@@ -24,8 +24,10 @@ How to Run?
         2. Maven 3.x (http://maven.apache.org/download.html)
 
     Running:
-        1. "mvn clean install"
-        2. "mvn exec:java" (currently just running java from within VSCode)
+        1. ** Before running, change the string `x12Format`(located in Main.java) to the desired format: "271", "834", "837", or "order"**
+        2. "mvn clean install"
+        3. "mvn exec:java" (currently just running java from within VSCode)
+            (I am currently just running Main.java from within VSCode)
 
 Troubleshooting
 ===========

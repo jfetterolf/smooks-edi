@@ -70,11 +70,14 @@ import java.util.Scanner;
  */
 public class Main {
 
+    // Change string to desired x12Format: "271", "834", "837", or "order"
+    private static String x12Format = "837";
     private static byte[] messageIn = readInputMessage();
+    
 
     protected static String runSmooksTransform() throws IOException, SAXException, SmooksException {
         // Instantiate Smooks with the config...
-        Smooks smooks = new Smooks("smooks-config.xml");
+        Smooks smooks = new Smooks("smooks-config-" + x12Format + ".xml");
         try {
              // Create an exec context - no profiles....
             ExecutionContext executionContext = smooks.createExecutionContext();
@@ -110,14 +113,20 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException, SAXException, SmooksException {
-        // SETTING UP FOR USER INPUT
-        // need to get user input for 837, 834 or 271
+        // // SETTING UP FOR USER INPUT
+        // // need to get user input for 837, 834 or 271
         // Scanner s = new Scanner(System.in);
         // System.out.println("Enter desired X12 format: 837, 834, or 271");
-        // String x12Format = String.valueOf(s.nextLine());
+        // String x12Format = s.nextLine().toString();
+        
+        // if (x12Format.equals("837") || x12Format.equals("834") || x12Format.equals("271")) {
+        //     System.out.println("success: " + x12Format);
+        // } else {
+        //     x12Format = "order";
+        //     System.out.println("Running with default message: " + x12Format);
+        // }
         // s.close();
-        // System.out.println("success: " + x12Format);
-        // save user input for choice of config file, input-message file, and output-message file(s)
+        // // save user input for choice of config file, input-message file, and output-message file(s)
 
 
         System.out.println("\n\n==============Message In==============");
@@ -138,7 +147,7 @@ public class Main {
 
     private static byte[] readInputMessage() {
         try {
-            return StreamUtils.readStream(new FileInputStream("input-message-271.edi"));
+            return StreamUtils.readStream(new FileInputStream("input-message-" + x12Format + ".edi"));
         } catch (IOException e) {
             e.printStackTrace();
             return "<no-message/>".getBytes();
