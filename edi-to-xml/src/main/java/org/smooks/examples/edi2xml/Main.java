@@ -42,6 +42,7 @@
  */
 package org.smooks.examples.edi2xml;
 
+import org.apache.xerces.impl.XMLEntityManager.ScannedEntity;
 import org.smooks.Smooks;
 import org.smooks.api.ExecutionContext;
 import org.smooks.api.SmooksException;
@@ -61,6 +62,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 // import java.util.Locale;
+import java.util.Scanner;
 
 
 /**
@@ -109,6 +111,16 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException, SAXException, SmooksException {
+        // SETTING UP FOR USER INPUT
+        // need to get user input for 837, 834 or 271
+        // Scanner s = new Scanner(System.in);
+        // System.out.println("Enter desired X12 format: 837, 834, or 271");
+        // String x12Format = String.valueOf(s.nextLine());
+        // s.close();
+        // System.out.println("success: " + x12Format);
+        // save user input for choice of config file, input-message file, and output-message file(s)
+
+
         System.out.println("\n\n==============Message In==============");
         System.out.println(new String(messageIn));
         System.out.println("======================================\n");
@@ -127,7 +139,7 @@ public class Main {
 
     private static byte[] readInputMessage() {
         try {
-            return StreamUtils.readStream(new FileInputStream("input-message.edi"));
+            return StreamUtils.readStream(new FileInputStream("input-message-834.edi"));
         } catch (IOException e) {
             e.printStackTrace();
             return "<no-message/>".getBytes();

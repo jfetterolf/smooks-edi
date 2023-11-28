@@ -18,15 +18,14 @@ About this example
         5. http://milyn.codehaus.org/EdiSax
 
 How to Run?
-sdk install java 8.0.372-amzn
 ===========
     Requirements:
-        1. JDK 1.8
+        1. JDK 1.8 (sdk install java 8.0.372-amzn)
         2. Maven 3.x (http://maven.apache.org/download.html)
 
     Running:
         1. "mvn clean install"
-        2. "mvn exec:java"
+        2. "mvn exec:java" (currently just running java from within VSCode)
 
 Troubleshooting
 ===========
