@@ -139,7 +139,7 @@ public class Main {
 
     private static byte[] readInputMessage() {
         try {
-            return StreamUtils.readStream(new FileInputStream("input-message-834.edi"));
+            return StreamUtils.readStream(new FileInputStream("input-message-837.edi"));
         } catch (IOException e) {
             e.printStackTrace();
             return "<no-message/>".getBytes();
