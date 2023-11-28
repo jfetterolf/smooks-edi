@@ -42,7 +42,6 @@
  */
 package org.smooks.examples.edi2xml;
 
-import org.apache.xerces.impl.XMLEntityManager.ScannedEntity;
 import org.smooks.Smooks;
 import org.smooks.api.ExecutionContext;
 import org.smooks.api.SmooksException;
@@ -139,7 +138,7 @@ public class Main {
 
     private static byte[] readInputMessage() {
         try {
-            return StreamUtils.readStream(new FileInputStream("input-message-837.edi"));
+            return StreamUtils.readStream(new FileInputStream("input-message-271.edi"));
         } catch (IOException e) {
             e.printStackTrace();
             return "<no-message/>".getBytes();
