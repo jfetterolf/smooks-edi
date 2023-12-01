@@ -1,194 +1,194 @@
 {
-  "transaction-set-header" : {
-    "transaction-set-identifier" : "837",
-    "transaction-set-control-number" : "3701",
-    "identifier-code" : "005010X222"
+  "transactionSetHeader" : {
+    "transactionSetIdentifier" : "837",
+    "transactionSetControlNumber" : "3701",
+    "identifierCode" : "005010X222"
   },
-  "beginning-hierarchichal-transaction" : {
-    "hierarchichal-structure-code" : "0019",
-    "transaction-set-purpose-code" : "00",
-    "reference-identification" : "007227",
+  "beginningHierarchichalTransaction" : {
+    "hierarchichalStructureCode" : "0019",
+    "transactionSetPurposeCode" : "00",
+    "referenceIdentification" : "007227",
     "date" : "20050215",
     "time" : "075420",
-    "transaction-set-type-code" : "CH"
+    "transactionSetTypeCode" : "CH"
   },
   "name" : {
-    "person-entity-identifier-code" : "41",
-    "entity-type-qualifier" : "2",
-    "full-name" : "DAVID GREEN",
-    "blank-1" : "",
-    "blank-2" : "",
-    "blank-3" : "",
-    "blank-4" : "",
-    "provider-entity-identifier-code" : "46",
-    "identification-code" : "S01057"
+    "personEntityIdentifierCode" : "41",
+    "entityTypeQualifier" : "2",
+    "fullName" : "DAVID GREEN",
+    "blank1" : "",
+    "blank2" : "",
+    "blank3" : "",
+    "blank4" : "",
+    "providerEntityIdentifierCode" : "46",
+    "identificationCode" : "S01057"
   },
-  "contact-information" : {
-    "contact-function-code" : "IC",
-    "contact-name" : "KATHY SMITH",
-    "communication-number-qualifier" : "TE",
-    "telephone-number" : "4105558888"
+  "contactInformation" : {
+    "contactFunctionCode" : "IC",
+    "contactName" : "KATHY SMITH",
+    "communicationNumberQualifier" : "TE",
+    "telephoneNumber" : "4105558888"
   },
-  "insurance-provider-information" : {
-    "entitiyy-identifier-code" : "40",
-    "entitity-type-qualifier" : "2",
-    "full-name" : "MEDICARE PART B MARYLAND",
-    "blank-1" : "",
-    "blank-2" : "",
-    "blank-3" : "",
-    "blank-4" : "",
-    "identification-code-qualifier" : "46",
-    "tax-code" : "12345"
+  "insuranceProviderInformation" : {
+    "entitiyyIdentifierCode" : "40",
+    "entitityTypeQualifier" : "2",
+    "fullName" : "MEDICARE PART B MARYLAND",
+    "blank1" : "",
+    "blank2" : "",
+    "blank3" : "",
+    "blank4" : "",
+    "identificationCodeQualifier" : "46",
+    "taxCode" : "12345"
   },
-  "header-level" : {
-    "hierarchical-id-number" : "1",
-    "blank-1" : "",
-    "hierarchical-level-code" : "20",
-    "hierarchical-child-code" : "1"
+  "headerLevel" : {
+    "hierarchicalIdNumber" : "1",
+    "blank1" : "",
+    "hierarchicalLevelCode" : "20",
+    "hierarchicalChildCode" : "1"
   },
-  "patient-info" : {
-    "person-entity-identifier-code" : "85",
-    "entity-type-qualifier" : "1",
+  "patientInfo" : {
+    "personEntityIdentifierCode" : "85",
+    "entityTypeQualifier" : "1",
     "name" : "GREENE",
-    "last-name" : "DAVID",
-    "middle-initial" : "M",
-    "blank-3" : "",
-    "blank-4" : "",
-    "provider-entity-identifier-code" : "XX",
-    "identification-code" : "1234567890"
+    "lastName" : "DAVID",
+    "middleInitial" : "M",
+    "blank3" : "",
+    "blank4" : "",
+    "providerEntityIdentifierCode" : "XX",
+    "identificationCode" : "1234567890"
   },
-  "patient-address" : {
-    "street-address" : "1264 OAKWOOD AVE"
+  "patientAddress" : {
+    "streetAddress" : "1264 OAKWOOD AVE"
   },
-  "geographic-location" : {
-    "city-name" : "BALTIMORE",
-    "state-name" : "MD",
-    "zip-code" : "21236"
+  "geographicLocation" : {
+    "cityName" : "BALTIMORE",
+    "stateName" : "MD",
+    "zipCode" : "21236"
   },
-  "reference-information" : {
-    "reference-identifier-qualifier" : "EI",
-    "reference-identifier" : "987654321"
+  "referenceInformation" : {
+    "referenceIdentifierQualifier" : "EI",
+    "referenceIdentifier" : "987654321"
   },
-  "contact-information-ic" : {
-    "contact-function-code" : "IC",
+  "contactInformationIc" : {
+    "contactFunctionCode" : "IC",
     "contact" : "DR",
-    "communication-number-qualifier" : "TE",
-    "telephone-number" : "4105551212"
+    "communicationNumberQualifier" : "TE",
+    "telephoneNumber" : "4105551212"
   },
-  "header-level-2" : {
-    "hierarchical-id-number" : "2",
-    "blank-1" : "1",
-    "hierarchical-level-code" : "22",
-    "hierarchical-child-code" : "0"
+  "headerLevel2" : {
+    "hierarchicalIdNumber" : "2",
+    "blank1" : "1",
+    "hierarchicalLevelCode" : "22",
+    "hierarchicalChildCode" : "0"
   },
-  "subscriber-information" : {
-    "payer-responsibility-sequence-number-code" : "P",
-    "individual-relationship-code" : "18",
-    "insurance-type-code" : "",
-    "group-code" : "",
-    "person-code" : "",
-    "claim-filing-indicator-code" : "",
-    "blank-1" : "",
-    "blank-2" : "MB"
+  "subscriberInformation" : {
+    "payerResponsibilitySequenceNumberCode" : "P",
+    "individualRelationshipCode" : "18",
+    "insuranceTypeCode" : "",
+    "groupCode" : "",
+    "personCode" : "",
+    "claimFilingIndicatorCode" : "",
+    "blank1" : "",
+    "blank2" : "MB"
   },
-  "name-entitiy-insured" : {
-    "person-entity-identifier-code" : "IL",
-    "entity-type-qualifier" : "1",
-    "first-name" : "WILLIAMSON",
-    "last-name" : "MATTHEW",
-    "middle-initial" : "J",
-    "blank-3" : "",
-    "blank-4" : "",
-    "provider-entity-identifier-code" : "MI",
-    "identification-code" : "123456789A"
+  "nameEntityInsured" : {
+    "personEntityIdentifierCode" : "IL",
+    "entityTypeQualifier" : "1",
+    "lastName" : "WILLIAMSON",
+    "firstName" : "MATTHEW",
+    "middleInitial" : "J",
+    "blank3" : "",
+    "blank4" : "",
+    "providerEntityIdentifierCode" : "MI",
+    "identificationCode" : "123456789A"
   },
-  "insured-address" : {
-    "street-address" : "128 BROADCREEK"
+  "insuredAddress" : {
+    "streetAddress" : "128 BROADCREEK"
   },
-  "insured-geographic-location" : {
-    "city-name" : "BALTIMORE",
-    "state-name" : "MD",
-    "zip-code" : "21234"
+  "insuredGeographicLocation" : {
+    "cityName" : "BALTIMORE",
+    "stateName" : "MD",
+    "zipCode" : "21234"
   },
-  "demographic-information" : {
+  "demographicInformation" : {
     "date" : "D8",
-    "date-of-birth" : "19250110",
-    "gender-information" : "M"
+    "dateOfBirth" : "19250110",
+    "genderInformation" : "M"
   },
-  "name-entitiy-payer" : {
-    "person-entity-identifier-code" : "PR",
-    "entity-type-qualifier" : "2",
-    "first-name" : "MEDICARE PART B MARYLAND",
-    "last-name" : "",
-    "middle-initial" : "",
-    "blank-3" : "",
-    "blank-4" : "",
-    "provider-entity-identifier-code" : "PI",
-    "identification-code" : "C12345"
+  "nameEntityPayer" : {
+    "personEntityIdentifierCode" : "PR",
+    "entityTypeQualifier" : "2",
+    "firstName" : "MEDICARE PART B MARYLAND",
+    "lastName" : "",
+    "middleInitial" : "",
+    "blank3" : "",
+    "blank4" : "",
+    "providerEntityIdentifierCode" : "PI",
+    "identificationCode" : "C12345"
   },
-  "claim-information" : {
-    "claim-id" : "125WILL",
-    "claim-amount" : "145.5",
-    "claim-info-1" : "",
-    "claim-info-2" : "",
-    "claim-info-3" : "11:B:1",
-    "claim-info-4" : "Y",
-    "claim-info-5" : "A",
-    "claim-info-6" : "Y",
-    "claim-info-7" : "Y"
+  "claimInformation" : {
+    "claimId" : "125WILL",
+    "claimAmount" : "145.5",
+    "claimInfo1" : "",
+    "claimInfo2" : "",
+    "claimInfo3" : "11:B:1",
+    "claimInfo4" : "Y",
+    "claimInfo5" : "A",
+    "claimInfo6" : "Y",
+    "claimInfo7" : "Y"
   },
-  "date-of-admission" : {
-    "date-code" : "454",
-    "date-qualifier-code" : "D8",
+  "dateOfAdmission" : {
+    "dateCode" : "454",
+    "dateQualifierCode" : "D8",
     "date" : "20050115"
   },
-  "date-of-onset" : {
-    "date-code" : "453",
-    "date-qualifier-code" : "D8",
+  "dateOfOnset" : {
+    "dateCode" : "453",
+    "dateQualifierCode" : "D8",
     "date" : "20050110"
   },
-  "date-of-last-visit" : {
-    "date-code" : "455",
-    "date-qualifier-code" : "D8",
+  "dateOfLastVisit" : {
+    "dateCode" : "455",
+    "dateQualifierCode" : "D8",
     "date" : "20050113"
   },
-  "spinal-manipulation-services-information" : {
-    "cr2-blank-1" : "",
-    "cr2-blank-2" : "",
-    "cr2-blank-3" : "",
-    "cr2-blank-4" : "",
-    "cr2-blank-5" : "",
-    "cr2-blank-6" : "",
-    "cr2-blank-7" : "",
-    "cr2-blank-8" : "A",
-    "cr2-blank-9" : "",
+  "spinalManipulationServicesInformation" : {
+    "cr2Blank1" : "",
+    "cr2Blank2" : "",
+    "cr2Blank3" : "",
+    "cr2Blank4" : "",
+    "cr2Blank5" : "",
+    "cr2Blank6" : "",
+    "cr2Blank7" : "",
+    "cr2Blank8" : "A",
+    "cr2Blank9" : "",
     "diagnosis" : "CHRONIC PAIN AND DISCOMFORT"
   },
-  "health-care-diagnosis-code" : {
-    "health-care-code-information" : "BK:7215"
+  "healthCareDiagnosisCode" : {
+    "healthCareCodeInformation" : "BK:7215"
   },
-  "transaction-set-line-number" : {
-    "line-number" : "1"
+  "transactionSetLineNumber" : {
+    "lineNumber" : "1"
   },
-  "professional-service" : {
-    "service-code" : "HC:98940",
-    "charge-amount" : "145.5",
-    "unit-code" : "UN",
+  "professionalService" : {
+    "serviceCode" : "HC:98940",
+    "chargeAmount" : "145.5",
+    "unitCode" : "UN",
     "quantity" : "1",
-    "sv1-blank-1" : "",
-    "service-unit-count" : "1"
+    "sv1Blank1" : "",
+    "serviceUnitCount" : "1"
   },
-  "service-date" : {
-    "date-code" : "472",
-    "date-qualifier-code" : "D8",
+  "serviceDate" : {
+    "dateCode" : "472",
+    "dateQualifierCode" : "D8",
     "date" : "20050215"
   },
-  "reference-information-trailer" : {
+  "referenceInformationTrailer" : {
     "qualifier" : "6R",
-    "reference-id" : "01"
+    "referenceId" : "01"
   },
-  "transaction-set-trailer" : {
+  "transactionSetTrailer" : {
     "segments" : "29",
-    "transaction-set-control-number" : "3701"
+    "transactionSetControlNumber" : "3701"
   }
 }

@@ -61,7 +61,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 // import java.util.Locale;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 
 /**
@@ -70,8 +70,8 @@ import java.util.Scanner;
  */
 public class Main {
 
-    // Change string to desired x12Format: "271", "834", "837", or "order"
-    private static String x12Format = "837";
+    // Change string to desired x12Format: "271", "834", "837", or "order" (testing: "837-generic")
+    private static String x12Format = "837-generic";
     private static byte[] messageIn = readInputMessage();
     
 
