@@ -52,9 +52,14 @@ import org.xml.sax.SAXException;
 
 
 import com.fasterxml.jackson.databind.JsonNode;
+// import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+// import com.fasterxml.jackson.databind.json.JsonMapper;
+// import com.fasterxml.jackson.databind.json.JsonMapper.Builder;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+// import com.thoughtworks.xstream.mapper.XmlFriendlyMapper;
 
+// import javax.imageio.IIOException;
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 import java.nio.file.Files;
@@ -63,6 +68,10 @@ import java.nio.file.Paths;
 // import java.util.Locale;
 // import java.util.Scanner;
 
+import org.json.JSONObject;
+import org.json.XML;
+
+
 
 /**
  * Simple example main class.
@@ -70,8 +79,8 @@ import java.nio.file.Paths;
  */
 public class Main {
 
-    // Change string to desired x12Format: "271", "834", "837", or "order" (testing: "837-generic")
-    private static String x12Format = "837-generic";
+    // Change string to desired x12Format: "271", "834", "837", or "order" (testing: "837-generic", "834-generic")
+    private static String x12Format = "271";
     private static byte[] messageIn = readInputMessage();
     
 
@@ -98,7 +107,7 @@ public class Main {
 
             
             System.out.println("\n\n===========JSON Result============");
-            String jsonString = convertXmlToJson(result.getResult().toString());
+            String jsonString = convert(result.getResult().toString());
             System.out.println(jsonString);
             System.out.println("======================================\n\n");
 
@@ -182,11 +191,22 @@ public class Main {
 
     }
 
+    // created issue where duplicate elements overwrite previously written elements
     public static String convertXmlToJson(String xml) throws IOException {
         XmlMapper xmlMapper = new XmlMapper();
         JsonNode node = xmlMapper.readTree(xml.getBytes());
         ObjectMapper jsonMapper = new ObjectMapper();
         return jsonMapper.writerWithDefaultPrettyPrinter().writeValueAsString(node);
+    }
+
+    // looks like this fixes the issue with overwriting duplicates
+    public static String convert(String xml) throws IOException {
+
+        // Convert XML to JSON
+        JSONObject json = XML.toJSONObject(xml);
+
+        // Return Output
+        return json.toString();
     }
 
     public static void writeJson(String filePath, String jsonString) {

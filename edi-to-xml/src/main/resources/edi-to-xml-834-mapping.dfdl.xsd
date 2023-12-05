@@ -11,168 +11,215 @@
         </xsd:appinfo>
     </xsd:annotation>
 
-    <xsd:element name="x12-834">
+    <xsd:element name="x12834">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:sequence dfdl:initiatedContent="yes">
-                    <xsd:element dfdl:initiator="GS" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="functional-group-header">
+                    <xsd:element dfdl:initiator="ST" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="ST">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="functional-identifier-code" type="xsd:string"/>
-                                <xsd:element name="application-sender-code" type="xsd:string"/>
-                                <xsd:element name="application-receiver-code" type="xsd:string"/>
-                                <xsd:element name="date" type="xsd:string"/>
-                                <xsd:element name="time" type="xsd:string"/>
-                                <xsd:element name="group-control-number" type="xsd:string"/>
-                                <xsd:element name="responsible-agency-code" type="xsd:string"/>
-                                <xsd:element name="release-version-code" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="ST" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="transaction-set-header">
+                    <xsd:element dfdl:initiator="BGN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="BGN">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="type" type="xsd:string"/>
-                                <xsd:element name="control-number" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
+                                <xsd:element name="d" type="xsd:string"/>
+                                <xsd:element name="e" type="xsd:string"/>
+                                <xsd:element name="f" type="xsd:string"/>
+                                <xsd:element name="g" type="xsd:string"/>
+                                <xsd:element name="h" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="BGN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="beg-segment">
+                    <xsd:element dfdl:initiator="N1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="N1" maxOccurs="unbounded">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="set-purpose-code" type="xsd:string"/>
-                                <xsd:element name="reference-id" type="xsd:string"/>
-                                <xsd:element name="date" type="xsd:string"/>
-                                <xsd:element name="time" type="xsd:string"/>
-                                <xsd:element name="time-code" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
+                                <xsd:element name="d" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="order-item" maxOccurs="unbounded">
+                    <xsd:element dfdl:initiator="INS" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="INS">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="reference-identification-qualifier" type="xsd:string"/>
-                                <xsd:element name="reference-id" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
+                                <xsd:element name="d" type="xsd:string"/>
+                                <xsd:element name="e" type="xsd:string"/>
+                                <xsd:element name="f" type="xsd:string"/>
+                                <xsd:element name="g" type="xsd:string"/>
+                                <xsd:element name="h" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="N1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="company-name">
+                    <xsd:element dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="REF" maxOccurs="unbounded">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="identifier" type="xsd:string"/>
-                                <xsd:element name="company-name" type="xsd:string"/>
-                                <xsd:element name="state" type="xsd:string"/>
-                                <xsd:element name="company-id" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="INS" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="benefit-info">
+                    <xsd:element dfdl:initiator="DTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="DTP1">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="response-code" type="xsd:string"/>
-                                <xsd:element name="maintenance-code" type="xsd:string"/>
-                                <xsd:element name="ins-line-code" type="xsd:string"/>
-                                <xsd:element name="plan-coverage-description" type="xsd:string"/>
-                                <xsd:element name="coverage-level-code" type="xsd:string"/>
-                                <xsd:element name="policy-number" type="xsd:string"/>
-                                <xsd:element name="plan-network-id" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="HSD" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="health-coverage">
+                    <xsd:element dfdl:initiator="NM1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="NM1">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="level-code" type="xsd:string"/>
-                                <xsd:element name="health-coverage-code" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
+                                <xsd:element name="d" type="xsd:string"/>
+                                <xsd:element name="e" type="xsd:string"/>
+                                <xsd:element name="f" type="xsd:string"/>
+                                <xsd:element name="g" type="xsd:string"/>
+                                <xsd:element name="h" type="xsd:string"/>
+                                <xsd:element name="i" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="DTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="date-time-period">
+                    <xsd:element dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="PER">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="coverage-period" type="xsd:string"/>
-                                <xsd:element name="date-format-code" type="xsd:string"/>
-                                <xsd:element name="date-range" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
+                                <xsd:element name="d" type="xsd:string"/>
+                                <xsd:element name="e" type="xsd:string"/>
+                                <xsd:element name="f" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="QTY" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="quantity">
+                    <xsd:element dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="N3">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="family-size" type="xsd:string"/>
-                                <xsd:element name="quantity" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="N1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="name-segment">
+                    <xsd:element dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="N4">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="entity-identifier-code" type="xsd:string"/>
-                                <xsd:element name="last-name" type="xsd:string"/>
-                                <xsd:element name="first-name" type="xsd:string"/>
-                                <xsd:element name="middle-initial" type="xsd:string"/>
-                                <xsd:element name="identification-code" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
+                                <xsd:element name="d" type="xsd:string"/>
+                                <xsd:element name="e" type="xsd:string"/>
+                                <xsd:element name="f" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="address-info">
+                    <xsd:element dfdl:initiator="DMG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="DMG">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="address" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="geographic-location">
+                    <xsd:element dfdl:initiator="HD" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="HD1">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="city-name" type="xsd:string"/>
-                                <xsd:element name="state-code" type="xsd:string"/>
-                                <xsd:element name="postal-code" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="DMG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="demographic-info">
+                    <xsd:element dfdl:initiator="DTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="DTP2">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="date-format-code" type="xsd:string"/>
-                                <xsd:element name="date-of-birth" type="xsd:string"/>
-                                <xsd:element name="gender-code" type="xsd:string"/>
-                                <xsd:element name="marital-status-code" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="LUI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="life-event-info" maxOccurs="unbounded">
+                    <xsd:element dfdl:initiator="COB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="COB">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="event-code" type="xsd:string"/>
-                                <xsd:element name="group-spec-code" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="SE" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="transaction-set-trailer">
+                    <xsd:element dfdl:initiator="HD" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="HD2">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="segments" type="xsd:string"/>
-                                <xsd:element name="transaction-set-control-number" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="GE" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="functional-group-trailer">
+                    <xsd:element dfdl:initiator="DTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="DTP3">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="tranaction-sets" type="xsd:string"/>
-                                <xsd:element name="function-group-control-number" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
-                    <xsd:element dfdl:initiator="IEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="interchange-control-trailer">
+                    <xsd:element dfdl:initiator="HD" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="HD3">
                         <xsd:complexType>
                             <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-                                <xsd:element name="functional-groups" type="xsd:string"/>
-                                <xsd:element name="interchange-control-number" type="xsd:string"/>
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:element>
+                    <xsd:element dfdl:initiator="DTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="DTP4">
+                        <xsd:complexType>
+                            <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                                <xsd:element name="c" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element dfdl:initiator="SE" dfdl:ref="ibmEdiFmt:EDISegmentFormat" name="SE">
+                        <xsd:complexType>
+                            <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+                                <xsd:element name="a" type="xsd:string"/>
+                                <xsd:element name="b" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </xsd:sequence>
             </xsd:sequence>
         </xsd:complexType>
